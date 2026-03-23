@@ -19,7 +19,7 @@ The file does not contain graph matrices, since including them would make the fi
 The columns of `github_final_ER_results.pkl` are: 
 
        
-       ['N', 'p', 'E1B1_solution_times',
+       'N', 'p', 'E1B1_solution_times',
        'E1B1_optimal_values', 'E1B2_solution_times', 'E1B2_optimal_values',
        'E1B4_solution_times', 'E1B4_optimal_values', 'E2B1_solution_times',
        'E2B1_optimal_values', 'E2B2_solution_times', 'E2B2_optimal_values',
@@ -30,10 +30,20 @@ The columns of `github_final_ER_results.pkl` are:
        'E1SB4_solution_times', 'E1SB4_optimal_values', 'E3SB1_solution_times',
        'E3SB1_optimal_values', 'E3SB2_solution_times', 'E3SB2_optimal_values',
        'E3SB4_solution_times', 'E3SB4_optimal_values', 'E3B3_solution_times',
-       'E3B3_optimal_values']
+       'E3B3_optimal_values'
 
 Markov Graph Data:
-The data set for testing the 9 formulations `E1B1, E1B2, E1B4, E2B1, E2B2, E2B4, E3B1, E3B2, E3B4` on 1080 Markov Graphs are stored in the file `Markov_graph_data.pkl`
+The data set for testing the 9 formulations `E1B1, E1B2, E1B4, E2B1, E2B2, E2B4, E3B1, E3B2, E3B4` on 1080 Markov Graphs are stored in the file `Markov_graph_data.pkl`. 
+
+The columns fof `Markov_graph_data.pkl` are: 
+
+       'N', 'p', 'r', 'p_hat', 'E1B1_solution_times',
+              'E1B1_optimal_values', 'E1B2_solution_times', 'E1B2_optimal_values',
+              'E1B4_solution_times', 'E1B4_optimal_values', 'E2B1_solution_times',
+              'E2B1_optimal_values', 'E2B2_solution_times', 'E2B2_optimal_values',
+              'E2B4_solution_times', 'E2B4_optimal_values', 'E3B1_solution_times',
+              'E3B1_optimal_values', 'E3B2_solution_times', 'E3B2_optimal_values',
+              'E3B4_solution_times', 'E3B4_optimal_values'
 
 The notebook `generating_markov_plots.ipynb` contains the code used to generate the plots for the Markov graph section of the report. It uses data from `Markov_graph_data.pkl`.
 
