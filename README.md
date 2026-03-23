@@ -28,8 +28,11 @@ The data set for testing the 15 formulations E1B1, E1B2, E1B4, E2B1, E2B2, E2B4,
 
 The data set for testing the 9 formulations E1B1, E1B2, E1B4, E2B1, E2B2, E2B4, E3B1, E3B2, E3B4 on 1080 Markov Graphs is included in the pkl file..,
 
-The data set for testing the 9 formulations E1B1, E1B2, E1B4, E2B1, E2B2, E2B4, E3B1, E3B2, E3B4 on the 24 DIMACS instances is included in the pkl file...
+The data set for testing the 9 formulations E1B1, E1B2, E1B4, E2B1, E2B2, E2B4, E3B1, E3B2, E3B4 on the 24 DIMACS instances is included in the pkl file DIMAC
 
-We present the code we used to generate the plots for the Markov section of this report in the file...
-  The plots for Erdős-Renyi graphs and DIMACS graphs can be generated analogously
+We present the code we used to generate the plots for the Markov section of this report in the file generating_markov_plots.ipynb
+       The data it needs for plotting is contained in the pkl file Markov_graph_data.pkl 
+       It also shows how to compute the p_hat value for each graph given its matrix but the pkl file does not contain the matrices due to github upload limitations. 
+       
+                The plots for Erdős-Renyi graphs and DIMACS graphs can be generated analogously
 
