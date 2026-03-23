@@ -40,6 +40,34 @@ def gen_graph_mat(n, p):
     return graph_matrix
 
 
+def generate_markov_graph_mat(N, p, r):
+    """
+    Generate an undirected recursive Markov random graph adjacency matrix
+    matching Definition 1 exactly.
+    """
+
+    matrix = np.zeros((N, N), dtype=int)
+
+    # generate edges column-by-column
+    for i in range(1, N):
+        if random.random() < p:
+            matrix[i, 0] = 1
+
+        # Markov dependence in j
+        for j in range(1, i):
+            prev_edge = matrix[i, j - 1]
+            prob = p if prev_edge == 0 else r * p
+
+            if random.random() < prob:
+                matrix[i, j] = 1
+
+    # symmetrise: copy LOWER → UPPER
+    for i in range(1, N):
+        for j in range(i):
+            matrix[j, i] = matrix[i, j]
+    np.fill_diagonal(matrix, 0)
+
+    return matrix
 
 
 
@@ -59,7 +87,6 @@ def matrix_to_list(matrix):
 
     n = len(matrix)
     return [[i,j] for i in range(n) for j in range(i+1,n) if matrix[i][j] == 1]
-
 
 
 
